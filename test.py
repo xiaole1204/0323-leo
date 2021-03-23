@@ -12,11 +12,16 @@ class Crypt:
         cipherText = ['']*msgLen
         for i in range(msgLen):
             cipherText[i]=chr(ord(msglist[i]) ^ ord(keylist[i % keyLen]))
-            print(chr)
             return''.join(cipherText)
     def decrypt(self, msg):
-        print("decrypt hello")
-
+        keyList=list(self.key)
+        msgList=list(msg)
+        keyLen=len(keyList)
+        msglen=len(msgList)
+        cipherText = ['']*msglen
+        for i in range(msglen):
+            cipherText[i]=chr(ord(msgList[i]) ^ ord(keyList[i % keyLen]))
+            return''.join(cipherText)
 if __name__ == "__miain__":
     print(sys.argv)
     if len(sys.argv) >2:
