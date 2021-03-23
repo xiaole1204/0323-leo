@@ -24,11 +24,11 @@ class Crypt:
             return''.join(cipherText)
 if __name__ == "__miain__":
     print(sys.argv)
-    if len(sys.argv) >2:
-        if sys.argv[1] =='e':
+    if len(sys.argv) > 2:
+        if sys.argv[1] =='-e':
             c = Crypt(sys.argv[2])
             print(c.encrypt(sys.argv[3])) 
-        elif sys.argv[1] =='d':
+        elif sys.argv[1] =='-d':
             c = Crypt(sys.argv[2])
             print(c.encrypt(sys.argv[3])) 
     
