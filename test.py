@@ -1,5 +1,5 @@
 import sys
-
+import random as ra
 
 class Crypt:
     def __init__(self, key):
